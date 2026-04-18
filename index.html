@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raghada Alqarawi - Software Engineer</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="greeting" class="greeting-banner"></div>
+
+<header class="navbar">
+  <div class="nav-container">
+    <div class="brand">
+      <span class="brand-dot"></span>
+      <h1 class="logo">Raghada Alqarawi</h1>
+    </div>
+
+    <nav class="nav-links">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#advice" class="nav-link">Advice</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <button id="themeBtn" class="theme-btn" type="button" aria-label="Toggle theme">
+      <span class="theme-icon">🌙</span>
+    </button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <h1 class="hero-title">Hi, I'm Raghada Alqarawi.</h1>
+    <h3 class="hero-subtitle">Software Engineering Student • Web Developer</h3>
+    <p class="hero-text">
+      I build structured, user-friendly applications with a focus on clarity, usability, and clean implementation.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary smooth-scroll">View Projects</a>
+      <a href="#contact" class="btn btn-secondary smooth-scroll">Contact Me</a>
+    </div>
+
+    <div class="hero-meta">
+      <p id="welcomeMessage" class="hero-status">Welcome to my portfolio.</p>
+      <p id="sessionTimer" class="hero-status">Time on site: 0s</p>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section reveal">
+  <div class="section-head">
+    <h2>About Me</h2>
+  </div>
+  <div class="about-card">
+    <div class="about-image">
+      <div class="profile-placeholder">
+        <span>👩‍💻</span>
+      </div>
+    </div>
+    <div class="about-content">
+      <p>
+        I'm Raghada Alqarawi, a Software Engineering student focused on creating well-structured and user-friendly web applications.
+        I enjoy turning requirements into clean interfaces and improving solutions through careful design and implementation.
+        I'm always learning and refining my skills through practical projects.
+      </p>
+      <div class="tags">
+        <span class="tag">Clean UI</span>
+        <span class="tag">Structured Code</span>
+        <span class="tag">Problem Solving</span>
+        <span class="tag">Responsive Design</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="section reveal">
+  <div class="section-head">
+    <h2>Projects</h2>
+    <p>Use the category buttons, search box, and sorting menu to explore projects in different ways.
+    </p>
+  </div>
+
+  <div class="projects-toolbar">
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all" type="button">All</button>
+      <button class="filter-btn" data-filter="planning" type="button">Planning</button>
+      <button class="filter-btn" data-filter="navigation" type="button">Navigation</button>
+      <button class="filter-btn" data-filter="productivity" type="button">Productivity</button>
+    </div>
+
+    <div class="search-box">
+      <input type="text" id="projectSearch" placeholder="Search project name...">
+    </div>
+
+    <div class="search-box">
+      <select id="sortProjects">
+        <option value="default">Sort Projects</option>
+        <option value="az">A → Z</option>
+        <option value="za">Z → A</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="cards" id="projectCards">
+
+    <article class="card reveal-card" data-category="planning" data-title="event planner">
+      <div class="card-top event-planner"></div>
+      <div class="card-content">
+        <h3>Event Planner</h3>
+        <p>
+          A planning application concept to organize events, manage schedules,
+          and track tasks to ensure smooth coordination.
+        </p>
+        <div class="tags">
+          <span class="tag">Scheduling</span>
+          <span class="tag">Task Tracking</span>
+          <span class="tag">Coordination</span>
+        </div>
+        <button
+                class="btn btn-secondary details-btn"
+                data-title="Event Planner"
+                data-description="A planning application designed to organize events, manage schedules, and coordinate tasks efficiently."
+                data-type="Planning Application"
+                data-tools="HTML, CSS, JavaScript"
+                data-features="Scheduling, task tracking, coordination"
+                type="button">
+          View Details
+        </button>
+      </div>
+    </article>
+
+    <article class="card reveal-card" data-category="navigation" data-title="kfupmmap">
+      <div class="card-top kfupm-map"></div>
+      <div class="card-content">
+        <h3>KFUPMMap</h3>
+        <p>
+          A campus navigation tool that calculates distances between KFUPM buildings
+          and helps students plan their routes efficiently.
+        </p>
+        <div class="tags">
+          <span class="tag">Navigation</span>
+          <span class="tag">Distance</span>
+          <span class="tag">UX</span>
+        </div>
+        <button
+                class="btn btn-secondary details-btn"
+                data-title="KFUPMMap"
+                data-description="A navigation tool that calculates distances between buildings at KFUPM."
+                data-type="Navigation Tool"
+                data-tools="HTML, CSS, JavaScript"
+                data-features="Distance calculation, building navigation"
+                type="button">
+          View Details
+        </button>
+      </div>
+    </article>
+
+    <article class="card reveal-card" data-category="productivity" data-title="study planner">
+      <div class="card-top study-planner"></div>
+      <div class="card-content">
+        <h3>Study Planner</h3>
+        <p>
+          A productivity tool designed to organize study goals,
+          track weekly progress, and help students manage time effectively.
+        </p>
+        <div class="tags">
+          <span class="tag">Time Management</span>
+          <span class="tag">Goals</span>
+          <span class="tag">Productivity</span>
+        </div>
+        <button
+                class="btn btn-secondary details-btn"
+                data-title="Study Planner"
+                data-description="A personal planning tool to organize study goals and track weekly progress."
+                data-type="Productivity Tool"
+                data-tools="HTML, CSS, JavaScript"
+                data-features="Goal tracking, weekly planning"
+                type="button">
+          View Details
+        </button>
+      </div>
+    </article>
+
+  </div>
+
+  <p id="noProjectsMessage" class="empty-state">
+    No projects found. Try another category or search term.
+  </p>
+</section>
+
+<section id="advice" class="section reveal">
+  <div class="section-head">
+    <h2>Developer Advice</h2>
+    <p>Live advice loaded from an external API.</p>
+  </div>
+
+  <div class="about-card advice-card">
+    <div class="about-content">
+      <p id="adviceText" class="advice-text">Loading advice...</p>
+      <div class="tags">
+        <span class="tag" id="adviceIdTag">Advice API</span>
+      </div>
+
+      <div class="hero-actions advice-actions">
+        <button id="loadAdviceBtn" class="btn btn-primary" type="button">Get New Advice</button>
+      </div>
+
+      <p id="adviceError" class="form-feedback"></p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section reveal">
+  <div class="section-head">
+    <h2>Get In Touch</h2>
+    <p>Let's discuss your next project or collaboration opportunity.</p>
+  </div>
+
+  <div class="contact-intro">
+    <div class="form-group">
+      <label for="visitorName">Your Name for a Personalized Welcome</label>
+      <input id="visitorName" type="text" placeholder="Your Name">
+      <small class="error-text" id="visitorNameError"></small>
+    </div>
+    <button id="saveVisitorBtn" type="button" class="btn btn-secondary">Save Name</button>
+  </div>
+
+  <form id="contactForm" class="contact" novalidate>
+    <div class="form-group">
+      <label for="name">Full Name</label>
+      <input id="name" type="text" placeholder="Your Name">
+      <small class="error-text" id="nameError"></small>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input id="email" type="email" placeholder="your.email@example.com">
+      <small class="error-text" id="emailError"></small>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" placeholder="Tell me about your project or say hello!" rows="5"></textarea>
+      <small class="error-text" id="messageError"></small>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Send Message</button>
+    <p id="formMessage" class="form-feedback"></p>
+  </form>
+</section>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="social-links">
+      <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+      <a href="mailto:example@email.com" aria-label="Email">Email</a>
+    </div>
+  </div>
+</footer>
+
+<div id="projectModal" class="modal">
+  <div class="modal-content">
+    <button id="closeModal" class="modal-close" type="button">&times;</button>
+    <h3 id="modalTitle"></h3>
+    <p id="modalDescription"></p>
+    <p><strong>Type:</strong> <span id="modalType"></span></p>
+    <p><strong>Tools:</strong> <span id="modalTools"></span></p>
+    <p><strong>Key Features:</strong> <span id="modalFeatures"></span></p>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
